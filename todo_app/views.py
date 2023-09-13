@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 
 from .models import Task
-from .serializers import TaskSerializer
+from .serializers import TaskSerializer, UserSerializer
 
 
 class TaskListCreateView(generics.ListCreateAPIView):
@@ -16,3 +16,6 @@ class TaskDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
+class UserCreate(generics.CreateAPIView):
+    """View for creating User"""
+    serializer_class = UserSerializer
