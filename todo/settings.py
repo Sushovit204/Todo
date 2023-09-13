@@ -31,6 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #My_apps
+    'rest_framework',
+    'todo_app',
+
+    #Default_apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
