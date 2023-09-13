@@ -12,4 +12,4 @@ To install the project, run the following command:
 
 
 ## Usage
-To run the app, run `python manage.py runserver`` command.
+To run the app, run `python manage.py runserver` command.

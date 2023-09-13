@@ -4,7 +4,7 @@ from datetime import date
 from .models import Task
 
 
-class TaskSerializers(serializers.ModelSerializer):
+class TaskSerializer(serializers.ModelSerializer):
     """Creating serializers for the Task Model"""
 
     class Meta:
