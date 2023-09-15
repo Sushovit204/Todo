@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     #My_apps
     'rest_framework',
     'todo_app',
+    'rest_framework.authtoken',
 
     #Default_apps
     'django.contrib.admin',
@@ -103,6 +104,17 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+    'rest_framework.authentication.TokenAuthentication',
+    'rest_framework.authentication.SessionAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASEES':(
+        'rest_framework.permission.IsAuthenticated',
+    )
+}
 
 
 # Internationalization

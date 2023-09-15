@@ -18,4 +18,7 @@ class TaskDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 class UserCreate(generics.CreateAPIView):
     """View for creating User"""
+    authentication_classes = () #Giving exemption to UserCreate for authentication and permission by overiding global settings
+    permission_classes = ()
     serializer_class = UserSerializer
+    
